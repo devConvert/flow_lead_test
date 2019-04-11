@@ -42,4 +42,4 @@ All fields inside "data" are required. "client_ip" is the IP of the user and "cl
 
 ### Sending Test Leads
 
-All test leads should be sent with the postfix "@mailinator.com" so we can tell their actually for testing purposes.
+All test leads should be sent with the postfix "@mailinator.com" so we can tell they're not real leads.
