@@ -44,7 +44,7 @@ All fields in the $data array are required. "client_ip" is the IP of the user an
 
 All test lead emails should be sent with the postfix "@mailinator.com" so we can tell they're not real leads.
 
-Full example given in PHP:
+### Full Example
 
 ```
 <?php
