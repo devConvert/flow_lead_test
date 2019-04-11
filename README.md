@@ -38,7 +38,7 @@ $data = base64_encode(json_encode(array(
 ), JSON_UNESCAPED_UNICODE));
 ```
 
-All fields inside "data" are required. "client_ip" is the IP of the user and "client_origin_domain" is the domain name the user came from.
+All fields in the $data array are required. "client_ip" is the IP of the user and "client_origin_domain" is the domain name the user came from.
 
 ### Sending Test Leads
 
