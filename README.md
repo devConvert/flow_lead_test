@@ -24,7 +24,7 @@ The payload should contain the following:
 }
 ```
 
-The "data" parameter is a JSON string encoded in Base64.
+The "data" parameter is a JSON string encoded as Base64.
 The following code in PHP demonstrates how to encode an array with lead information:
 ```
 $data = base64_encode(json_encode(array(
