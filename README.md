@@ -43,3 +43,52 @@ All fields in the $data array are required. "client_ip" is the IP of the user an
 ### Sending Test Leads
 
 All test lead emails should be sent with the postfix "@mailinator.com" so we can tell they're not real leads.
+
+Full example given in PHP:
+
+```
+<?php
+
+	// your affiliate id
+        $lead_aff_id = "aa1";
+
+	// lead information
+        $data = array(
+	    "email" => "test1@mailinator.com",
+	    "firstname" => "John",
+	    "lastname" => "Smith",
+	    "phone1" => "+12345678",
+	    "password" => "Pasd133X",
+	    "client_ip" => "195.254.219.60",
+	    "client_origin_domain" => "myfunneldomain.com"
+        );
+
+
+
+        ////////////////////////////
+
+        $o = array(
+            "ws_ver" => "1.0",
+            "event_type_id" => 1,
+            "lead_aff_id" => $lead_aff_id,
+            "data" => base64_encode(json_encode($data, JSON_UNESCAPED_UNICODE))
+        );
+
+        $postdata = http_build_query($o);
+    
+        $opts = array("http" => 
+            array (
+                "method" => "POST",
+                "header" => "Content-Type: application/x-www-form-urlencoded",
+                "content" => $postdata
+            )
+        );
+    
+        $context  = stream_context_create($opts);
+    
+        $url = "http://track-flow.io/ws/1/flow/track/a27bd7afbde4e77717a5156d69a14405";
+        $result = file_get_contents($url, false, $context);        
+
+        echo $result;
+	
+```
