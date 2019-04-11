@@ -24,4 +24,16 @@ The payload should contain the following:
 }
 ```
 
-
+The "data" parameter is a JSON string encoded in Base64.
+The following code in PHP demonstrates how to encode an associative array with lead information:
+```
+$data = base64_encode(json_encode(array(
+	"email" => "test1@mailinator.com",
+	"firstname" => "John",
+	"lastname" => "Smith",
+	"phone1" => "+12345678",
+	"password" => "Pasd133X",
+	"client_ip" => "195.254.219.60",
+	"client_origin_domain" => "myfunneldomain.com"
+), JSON_UNESCAPED_UNICODE));
+```
