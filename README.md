@@ -39,3 +39,7 @@ $data = base64_encode(json_encode(array(
 ```
 
 All fields inside "data" are required. "client_ip" is the IP of the user and "client_origin_domain" is the domain name the user came from.
+
+### Sending Test Leads
+
+All test leads should be sent with the postfix "@mailinator.com" so we can tell their actually for testing purposes.
