@@ -4,7 +4,7 @@
 
 sending leads as affiliates is possible in three ways:
 
-1. Tracking system link to an offer - the simplest way
+1. Tracking system link to our offer - the simplest way
 2. Integrate our JS SDK in your HTML page
 3. Send us HTTP requests via our REST API interface
 
