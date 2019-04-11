@@ -14,7 +14,11 @@ Lead information should be sent using HTTP POST to the following endpoint:
 
 http://track-flow.io/ws/1/flow/track/a27bd7afbde4e77717a5156d69a14405
 
+The payload should contain the following:
 
+{
+  "ws_ver": "1.0"
+}
 
 
 
