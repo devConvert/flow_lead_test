@@ -1,8 +1,8 @@
 # Welcome to Flow/Lead
 
-## Sending Leads - Affiliates
+## Sending Leads
 
-sending leads as affiliates is possible in three ways:
+sending leads is possible in three ways:
 
 1. Tracking system link to our offer - the simplest way
 2. Integrate our JS SDK in your HTML page
