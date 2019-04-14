@@ -260,17 +260,3 @@ or
 "err_num" => 30
 "err_desc" => "no matching integration"
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
