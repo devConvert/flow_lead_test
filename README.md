@@ -102,7 +102,7 @@ All test lead emails should be sent with the postfix "@mailinator.com" so we can
 
 In order to pull information we must whitelist your server IP.
 
-Aggregated data endpoint:
+**Aggregated data endpoint:**
 ```
 http://track-flow.io/ws/1/affiliate/aggregated/d1b06d78c0e5abe74e81f635b0c0ceff/{AFFILIATE ID}/{AFFILIATE TOKEN}/{START DATE in UTC}/{END DATE in UTC}
 ```
@@ -114,7 +114,7 @@ http://track-flow.io/ws/1/affiliate/aggregated/d1b06d78c0e5abe74e81f635b0c0ceff/
 Aggregated data output is in this format: [["{DATETIME in UTC}","{COUNTRY CODE}","{LEAD PARAMS ID}","{COUNT LEADS}","{COUNT FTDs}"], ... ]
 For example: [["2019-04-11 00:00:00","NO","4696eda8653935b8928528397e61fe54","1","0"], ... ]
 
-Deposits endpoint:
+**Deposits endpoint:**
 ```
 http://track-flow.io/ws/1/affiliate/deposits/d1b06d78c0e5abe74e81f635b0c0ceff/{AFFILIATE ID}/{AFFILIATE TOKEN}/{DATE in UTC}
 ```
@@ -126,7 +126,7 @@ http://track-flow.io/ws/1/affiliate/deposits/d1b06d78c0e5abe74e81f635b0c0ceff/aa
 Deposits data output is int this format: [["{DATETIME in UTC}","{COUNTRY CODE}","{EMAIL}","{LEAD PARAMS ID}","{DEPOSIT DETAILS}"]]
 For Example: [["2019-04-11 06:45:02","NO","test1@mailinator.com","99914b932bd37a50b983c5e7c90ae93b","{}"], ...]
 
-Specific lead information endpoint (by email):
+**Specific lead information endpoint (by email):**
 ```
 http://track-flow.io/ws/1/affiliate/email/d1b06d78c0e5abe74e81f635b0c0ceff/{AFFILIATE ID}/{AFFILIATE TOKEN}/{EMAIL}
 ```
