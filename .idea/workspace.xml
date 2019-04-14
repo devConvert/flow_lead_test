@@ -16,8 +16,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="295">
-                <caret line="228" column="3" lean-forward="true" selection-start-line="228" selection-start-column="3" selection-end-line="228" selection-end-column="3" />
+              <first_editor relative-caret-position="686">
+                <caret line="254" column="12" lean-forward="true" selection-start-line="254" selection-start-column="12" selection-end-line="254" selection-end-column="12" />
               </first_editor>
               <second_editor />
             </state>
@@ -89,12 +89,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1555243212263</updated>
-      <workItem from="1555243213668" duration="4532000" />
+      <workItem from="1555243213668" duration="4817000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4532000" />
+    <option name="totallyTimeSpent" value="4817000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
@@ -128,8 +128,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="295">
-            <caret line="228" column="3" lean-forward="true" selection-start-line="228" selection-start-column="3" selection-end-line="228" selection-end-column="3" />
+          <first_editor relative-caret-position="686">
+            <caret line="254" column="12" lean-forward="true" selection-start-line="254" selection-start-column="12" selection-end-line="254" selection-end-column="12" />
           </first_editor>
           <second_editor />
         </state>

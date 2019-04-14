@@ -227,7 +227,7 @@ or
 **If all the the data passed successfully, without complications you will get the following response**
 
 ```
-{"result":true,"action":"redirect","url":"https:\/\/URL_TO_REDIRECT?lid=320321&token=f930f6171048b58f69c661f771084df1"}
+{"result":true,"action":"redirect","url":"https:\/\/{URL_TO_REDIRECT}?lid{}=&token={}"}
 ```
  
 
