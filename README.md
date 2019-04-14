@@ -8,7 +8,11 @@ sending leads is possible in three ways:
 2. Integrate our JS SDK in your HTML page
 3. Send us HTTP requests via our REST API interface
 
-## Using our REST API
+## 1. Using a tracking system link (in development)
+
+## 2. Using our JS SDK (in development)
+
+## 3. Using our REST API
 
 Lead information should be sent using HTTP POST to the following endpoint:
 
@@ -19,7 +23,7 @@ The payload should contain the following:
 {
   "ws_ver": "1.0",
   "event_type_id": 1,
-  "lead_aff_id": "{YOUR AFFILIATE ID}",
+  "lead_aff_id": "{AFFILIATE ID}",
   "data": "eyJlbWFpbCI6InRlc3QxQG1haWxpbmF0b3IuY29tIiwiZmlyc3RuYW1lIjoiSm9obiIsImxhc3RuYW1lIjoiU21pdGgiLCAicGhvbmUxIjogIisxMjM0NTY3OCIsICJwYXNzd29yZCI6ICJQYXNkMTMzWCIsICJjbGllbnRfaXAiOiAiMTk1LjI1NC4yMTkuNjAiLCAiY2xpZW50X29yaWdpbl9kb21haW4iOiAibXlmdW5uZWxkb21haW4uY29tIn0="
 }
 ```
@@ -92,3 +96,23 @@ All test lead emails should be sent with the postfix "@mailinator.com" so we can
         echo $result;
 	
 ```
+
+### Pulling information with REST API
+
+In order to pull information we must whitelist your server IP.
+
+Aggregated data endpoint:
+http://track-flow.io/ws/1/affiliate/aggregated/d1b06d78c0e5abe74e81f635b0c0ceff/{AFFILIATE ID}/{AFFILIATE TOKEN}/{START DATE in UTC}/{END DATE in UTC}
+For example: http://track-flow.io/ws/1/affiliate/aggregated/d1b06d78c0e5abe74e81f635b0c0ceff/aa1/token123/2019-01-01/2019-01-02
+
+Aggregated data output is in this format: [["{DATETIME in UTC}","{COUNTRY CODE}","{LEAD PARAMS ID}","{COUNT LEADS}","{COUNT FTDs}"], ... ]
+For example: [["2019-04-11 00:00:00","NO","4696eda8653935b8928528397e61fe54","1","0"], ... ]
+
+Deposits endpoint:
+http://track-flow.io/ws/1/affiliate/deposits/d1b06d78c0e5abe74e81f635b0c0ceff/{AFFILIATE ID}/{AFFILIATE TOKEN}/{DATE in UTC}
+For example: http://track-flow.io/ws/1/affiliate/deposits/d1b06d78c0e5abe74e81f635b0c0ceff/aa1/token123/2019-01-01
+
+Deposits data output is int this format: [["{DATETIME in UTC}","{COUNTRY CODE}","{EMAIL}","{LEAD PARAMS ID}","{DEPOSIT DETAILS}"]]
+For Example: [["2019-04-11 06:45:02","NO","test1@mailinator.com","99914b932bd37a50b983c5e7c90ae93b","{}"], ...]
+
+
