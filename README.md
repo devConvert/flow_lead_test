@@ -98,43 +98,6 @@ All test lead emails should be sent with the postfix "@mailinator.com" so we can
 	
 ```
 
-### Pulling information with REST API
-
-In order to pull information we must whitelist your server IP and give you an affiliate token. An affiliate token is required only when pulling information but not when pushing leads.
-
-**Aggregated data endpoint:**
-```
-http://track-flow.io/ws/1/affiliate/aggregated/d1b06d78c0e5abe74e81f635b0c0ceff/{AFFILIATE ID}/{AFFILIATE TOKEN}/{START DATE in UTC}/{END DATE in UTC}
-```
-For example:
-```
-http://track-flow.io/ws/1/affiliate/aggregated/d1b06d78c0e5abe74e81f635b0c0ceff/aa1/token123/2019-01-01/2019-01-02
-```
-
-Aggregated data output is in this format: [["{DATETIME in UTC}","{COUNTRY CODE}","{LEAD PARAMS ID}","{COUNT LEADS}","{COUNT FTDs}"], ... ]
-For example: [["2019-04-11 00:00:00","NO","4696eda8653935b8928528397e61fe54","1","0"], ... ]
-
-**Deposits endpoint:**
-```
-http://track-flow.io/ws/1/affiliate/deposits/d1b06d78c0e5abe74e81f635b0c0ceff/{AFFILIATE ID}/{AFFILIATE TOKEN}/{DATE in UTC}
-```
-For example:
-```
-http://track-flow.io/ws/1/affiliate/deposits/d1b06d78c0e5abe74e81f635b0c0ceff/aa1/token123/2019-01-01
-```
-
-Deposits data output is int this format: [["{DATETIME in UTC}","{COUNTRY CODE}","{EMAIL}","{LEAD PARAMS ID}","{DEPOSIT DETAILS}"]]
-For Example: [["2019-04-11 06:45:02","NO","test1@mailinator.com","99914b932bd37a50b983c5e7c90ae93b","{}"], ...]
-
-**Specific lead information endpoint (by email):**
-```
-http://track-flow.io/ws/1/affiliate/email/d1b06d78c0e5abe74e81f635b0c0ceff/{AFFILIATE ID}/{AFFILIATE TOKEN}/{EMAIL}
-```
-For example:
-```
-http://track-flow.io/ws/1/affiliate/email/d1b06d78c0e5abe74e81f635b0c0ceff/aa1/token123/test1@mailinator.com
-```
-This endpoint returns JSON with details about the LEAD and DEPOSIT events. It can also be used to check whether this lead was sent in the past.
 
 
 ### Possible returned Errors from REST API
@@ -260,3 +223,42 @@ or
 "err_num" => 30
 "err_desc" => "no matching integration"
 ```
+
+
+### Pulling information with REST API
+
+In order to pull information we must whitelist your server IP and give you an affiliate token. An affiliate token is required only when pulling information but not when pushing leads.
+
+**Aggregated data endpoint:**
+```
+http://track-flow.io/ws/1/affiliate/aggregated/d1b06d78c0e5abe74e81f635b0c0ceff/{AFFILIATE ID}/{AFFILIATE TOKEN}/{START DATE in UTC}/{END DATE in UTC}
+```
+For example:
+```
+http://track-flow.io/ws/1/affiliate/aggregated/d1b06d78c0e5abe74e81f635b0c0ceff/aa1/token123/2019-01-01/2019-01-02
+```
+
+Aggregated data output is in this format: [["{DATETIME in UTC}","{COUNTRY CODE}","{LEAD PARAMS ID}","{COUNT LEADS}","{COUNT FTDs}"], ... ]
+For example: [["2019-04-11 00:00:00","NO","4696eda8653935b8928528397e61fe54","1","0"], ... ]
+
+**Deposits endpoint:**
+```
+http://track-flow.io/ws/1/affiliate/deposits/d1b06d78c0e5abe74e81f635b0c0ceff/{AFFILIATE ID}/{AFFILIATE TOKEN}/{DATE in UTC}
+```
+For example:
+```
+http://track-flow.io/ws/1/affiliate/deposits/d1b06d78c0e5abe74e81f635b0c0ceff/aa1/token123/2019-01-01
+```
+
+Deposits data output is int this format: [["{DATETIME in UTC}","{COUNTRY CODE}","{EMAIL}","{LEAD PARAMS ID}","{DEPOSIT DETAILS}"]]
+For Example: [["2019-04-11 06:45:02","NO","test1@mailinator.com","99914b932bd37a50b983c5e7c90ae93b","{}"], ...]
+
+**Specific lead information endpoint (by email):**
+```
+http://track-flow.io/ws/1/affiliate/email/d1b06d78c0e5abe74e81f635b0c0ceff/{AFFILIATE ID}/{AFFILIATE TOKEN}/{EMAIL}
+```
+For example:
+```
+http://track-flow.io/ws/1/affiliate/email/d1b06d78c0e5abe74e81f635b0c0ceff/aa1/token123/test1@mailinator.com
+```
+This endpoint returns JSON with details about the LEAD and DEPOSIT events. It can also be used to check whether this lead was sent in the past.
