@@ -135,3 +135,142 @@ For example:
 http://track-flow.io/ws/1/affiliate/email/d1b06d78c0e5abe74e81f635b0c0ceff/aa1/token123/test1@mailinator.com
 ```
 This endpoint returns JSON with details about the LEAD and DEPOSIT events. It can also be used to check whether this lead was sent in the past.
+
+
+### Possible returned Errors from REST API
+
+**Error number: 0**
+
+*Error Description: Wrong ws_ver*
+
+*Return Message:*
+```
+"err_num" => 0
+"err_desc" => "invalid data (1)"   ---   Wrong ws_ver parameter
+or
+"err_desc" => "invalid data (2)"   ---   
+or
+"err_desc" => "invalid data (3)"   ---   Wrong ws_ver parameter
+```
+
+**Error Number: 1**
+
+*Error Description: Invalid token*
+
+*Return Message:*
+
+```
+"err_num" => 1
+"err_desc" => "not a valid token"
+```
+
+**Error Number: 10**
+
+*Error Description: Lead's email or phone number is invalid*
+
+*Return Message:*
+
+```
+"err_num" => 10
+"err_desc" => "email or phone or not valid"
+```
+
+
+**Error Number: 11**
+
+*Error Description: Lead's IP is invalid*
+
+*Return Message:*
+
+```
+"err_num" => 11
+"err_desc" => ip not valid"
+```
+
+
+**Error Number: 12**
+
+*Error Description: Invalid Affiliate ID*
+
+*Return Message:*
+
+```
+"err_num" => 12
+"err_desc" => "lead aff id not valid"
+```
+
+
+**Error Number: 13**
+
+*Error Description: The domain from where the Lead came is invalid*
+
+*Return Message:*
+
+```
+"err_num" => 13
+"err_desc" => "client origin domain not valid"
+```
+
+
+**Error Number: 14**
+
+*Error Description: Lead's password is invalid*
+
+*Return Message:*
+
+```
+"err_num" => 14
+"err_desc" => "password not valid"
+```
+
+**Error Number: 15**
+
+*Error Description: Lead's first name or last name is invalid*
+
+*Return Message:*
+
+```
+"err_num" => 15
+"err_desc" => "firstname or lastname not valid"
+```
+
+
+**Error Number: 20**
+
+*Error Description: No parameters found in flow system*
+
+*Return Message:*
+
+```
+"err_num" => 20
+"err_desc" => "no flow params"
+```
+
+
+
+**Error Number: 30**
+
+*Error Description: No matching Integration was found*
+
+*!This error also may occur if there are no available Brokers!*
+
+*Return Message:*
+
+```
+"err_num" => 30
+"err_desc" => "no matching integration"
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
