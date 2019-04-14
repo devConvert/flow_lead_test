@@ -100,7 +100,7 @@ All test lead emails should be sent with the postfix "@mailinator.com" so we can
 
 ### Pulling information with REST API
 
-In order to pull information we must whitelist your server IP.
+In order to pull information we must whitelist your server IP and give you an affiliate token. An affiliate token is required only when pulling information but not when pushing leads.
 
 **Aggregated data endpoint:**
 ```
