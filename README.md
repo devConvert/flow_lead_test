@@ -275,3 +275,13 @@ For example:
 http://track-flow.io/ws/1/affiliate/email/d1b06d78c0e5abe74e81f635b0c0ceff/aa1/token123/test1@mailinator.com
 ```
 This endpoint returns JSON with details about the LEAD and DEPOSIT events. It can also be used to check whether this lead was sent in the past.
+
+**Make a fake deposit (by email):**
+```
+http://track-flow.io/ws/1/affiliate/test_lead_deposit/d1b06d78c0e5abe74e81f635b0c0ceff/{AFFILIATE ID}/{AFFILIATE TOKEN}/{EMAIL}
+```
+For example:
+```
+http://track-flow.io/ws/1/affiliate/test_lead_deposit/d1b06d78c0e5abe74e81f635b0c0ceff/aa1/token123/test1@mailinator.com
+```
+This will only work on an email with the postfix "@mailinator.com" as we consider them as test. This will automatically insert a deposit for this lead, but only if it got a deposit url in the first place. It may take about 15 minutes until the test deposit is visible when fetching deposits.
