@@ -263,7 +263,7 @@ http://track-flow.io/ws/1/affiliate/deposits/d1b06d78c0e5abe74e81f635b0c0ceff/aa
 Deposits data output is int this format:  
 [["{DATETIME in UTC}","{COUNTRY CODE}","{EMAIL}","{LEAD PARAMS ID}","{DEPOSIT DETAILS}"]]  
 
-For Example:  
+For example:  
 [["2019-04-11 06:45:02","NO","test1@mailinator.com","99914b932bd37a50b983c5e7c90ae93b","{}"], ...]
 
 **Specific lead information endpoint (by email):**
