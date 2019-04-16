@@ -285,3 +285,23 @@ For example:
 http://track-flow.io/ws/1/affiliate/test_lead_deposit/d1b06d78c0e5abe74e81f635b0c0ceff/aa1/token123/test1@mailinator.com
 ```
 This will only work on an email with the postfix "@mailinator.com" as we consider them as test. This will automatically insert a deposit for this lead, but only if the lead was inserted properly and got a deposit url in the first place. It may take about 15 minutes until the test deposit is visible when fetching deposits.
+
+**Leads endpoint:**
+
+```
+http://track-flow.io/ws/1/affiliate/leads/d1b06d78c0e5abe74e81f635b0c0ceff/{AFFILIATE ID}/{AFFILIATE TOKEN}/{DATE in UTC}
+```
+For example:
+```
+http://track-flow.io/ws/1/affiliate/leads/d1b06d78c0e5abe74e81f635b0c0ceff/aa1/token123/2019-01-01
+```
+Leads data output is int this format:
+
+[["{DATETIME in UTC}","{COUNTRY CODE}","{EMAIL}","{LEAD PARAMS ID}"]] 
+
+For example:
+
+[["2019-04-11 06:45:02","NO","test1@mailinator.com","99914b932bd37a50b983c5e7c90ae93b"]]
+
+
+
