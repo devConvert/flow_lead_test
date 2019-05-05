@@ -65,6 +65,7 @@ All test lead emails should be sent with the postfix "@mailinator.com" so we can
 	    "phone1" => "+12345678",
 	    "password" => "Pasd133X",
 	    "client_ip" => "195.254.219.60",
+	    "client_user_agent" => "USER AGENT STRING",
 	    "client_origin_domain" => "myfunneldomain.com"
         );
 
