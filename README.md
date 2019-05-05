@@ -39,6 +39,7 @@ $data = base64_encode(json_encode(array(
 	"phone1" => "+12345678",
 	"password" => "Pasd133X",
 	"client_ip" => "195.254.219.60",
+	"client_user_agent" => "USER AGENT STRING",
 	"client_origin_domain" => "myfunneldomain.com"
 ), JSON_UNESCAPED_UNICODE));
 ```
