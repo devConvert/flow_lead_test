@@ -229,7 +229,12 @@ or
 **If all the the data passed successfully, without complications you will get the following response**
 
 ```
-{"result":true,"action":"redirect","url":"{URL_TO_REDIRECT}"}
+{
+	"result":true,
+	"action":"redirect",
+	"url":"{URL_TO_REDIRECT}",
+	"lead_id": "..."	// 32 characters of a unique lead id
+}
 ```
  
 
